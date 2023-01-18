@@ -1,0 +1,97 @@
+body  {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: large;
+    background-color: white;
+}
+.hedr{
+    color: rgb(60, 47, 148);
+    text-align: left;
+
+    font-size: 50px;
+    font-weight:lighter;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.texts{
+    font-size: 17px;
+    font-weight:normal;
+}
+.login{
+    position: relative;
+    top: 200px;
+    float: right;
+    right: 750px;
+}
+
+button{
+
+    width: 450px;
+    height: 45px;
+    box-shadow: 1px 1px 5px;
+}
+label, #checkbox{
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+}
+#fgps{
+    text-decoration: none;
+    float:left;
+    position: relative;
+    left: 160px;
+    top: 20px;
+    color: rgb(60, 47, 148);
+}
+#Email{
+    width: 450px;
+    height: 45px;
+    border-radius:8px;
+    border: 0px;
+    padding-left: 8px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: large;
+    background-color: rgb(226, 238, 248);
+}
+#Pass{
+    width: 450px;
+    height: 45px;
+    border-radius:8px;
+    border: 0px;
+    padding-left: 8px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: large;
+    background-color: rgb(226, 238, 248);
+}
+span{
+    font-size: 17px;
+    font-size: 20px;
+
+}
+#log {
+    color: white;
+    border-radius: 2px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: rgb(66, 184, 221);
+    width: 363px;
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 7px;
+    font-size: 20px;
+}
+/*Responsive design*/
+button{
+    width: 100%;
+}
+#exampleInputEmail1{
+    border: 0px;
+    background-color: rgb(226, 239, 255);
+}
+#exampleInputPassword1{
+    border: 0px;
+    background-color: rgb(226, 239, 255);
+}
+
+table.dataTable {
+    background: red;
+}
+.error{display:none;}

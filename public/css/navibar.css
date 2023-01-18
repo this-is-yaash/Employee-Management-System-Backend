@@ -1,0 +1,68 @@
+/* Side bar*/
+.vertical-menu {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #ececec;
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.vertical-menu a {
+    background-color: #ececec;
+    color: black;
+    display: block;
+    padding: 40px;
+    text-decoration: none;
+    font-size: 95%;
+    overflow: hidden;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+  
+.vertical-menu a:hover {
+    background-color: rgb(41, 41, 43);
+    color: white;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+  
+.vertical-menu a.active {
+    background-color: rgb(184, 184, 184);
+    color: black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+/*top bar*/
+#navbar {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: rgb(41, 41, 43);
+    width: 100%;
+}
+  
+  li {
+    float: left;
+    position: relative;
+    left: 20px;
+} 
+/*Dashboard and logout*/
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 32px 16px;
+    text-decoration: none;
+    width:100%;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+.logout {
+    font-family: 'Trebuchet MS', sans-serif;
+    float: right;
+    position: relative;
+    right: 30px;    
+}
