@@ -11,7 +11,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="C:\Users\ASUS\Desktop\Employee Management System \Frontend\Admin\login.js" type="text/javascript"></script> 
     <title>
         Admin Login
     </title>
@@ -25,6 +24,15 @@
                 font-family: 'Trebuchet MS', sans-serif;
             }
         </style>
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
         <div class="d-flex align-items-center justify-content-center h-100"><!-- align-items-center(align vertical)justify-content-center(align horizontal) -->
             <div class="row">
                 <div class="col-md-12">
@@ -32,22 +40,22 @@
                 </div>
                 <div class="row ">
                     <div class="col-md-12">
-                        <form method="POST" action="authenticate">
+                        <form method="POST" action="{{route('login')}}">
                             @csrf
                             <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Username</label>
-                              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              <label for="exampleInputEmail1" class="form-label">Email</label>
+                              <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                             </div>
 
                             <div class="mb-3 form-check">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                 <label class="form-check-label" for="exampleCheck1">Keep me logged in</label>
                             </div>
-                                <button type="button" class="btn btn-secondary">Login</button>
+                                <button type="submit" class="btn btn-secondary">Login</button>
                           </form>
                     </div>
                 </div>

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Validator;
 use App\Http\Controllers\Controller;
-use Dotenv\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -14,14 +14,23 @@ class AuthController extends Controller
     {
         $data = $request->all();
 
-        $validator = Validator::make($data, [
-            'email'     => 'required|email',
-            'password'  => 'required|min:3'
+        // $validator = Validator::make($request->all(), [
+        //     'title' => 'required|unique:posts|max:255',
+        //     'body' => 'required',
+        // ]);
+        $request->validate([
+            'email' => 'required',
+            'password' => 'required'
+        ],
+        [
+            'email.required'    =>"Incorrect Email",
+            'password.required' =>"Incorrect Password"
         ]);
-         if ($validator->fails()) {
-            $errors = $validator->errors();
-            return back()->with('errors', $errors);
-        }
+
+        //  if ($validator->fails()) {
+        //     $errors = $validator->errors();
+        //     return back()->with('errors', $errors);
+        // }
         $user_data = array(
             'email'     => $data['email'],
             'password'  => $data['password']
@@ -32,4 +41,8 @@ class AuthController extends Controller
             return back()->with('error', 'Invalid Credentials!');
         }
     }
+    public function logout(Request $request) {
+        Auth::logout();
+        return redirect('/auth/login');
+      }
 }

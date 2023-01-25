@@ -18,8 +18,8 @@ class UsersSeeder extends Seeder
     {
         $data = [
             [
-                'email'=>"yashwanth@gmail.com",
-                'password' =>"12345678"
+                'email'=>"y1@gmail.com",
+                'password' => Hash::make('123')
             ]
         ];
         foreach ($data as $key =>$value){

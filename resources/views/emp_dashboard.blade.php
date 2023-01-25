@@ -21,7 +21,7 @@
       <ul id="navbar">
           <li><a href="{{'dashboard'}}">Dashboard</a></li>
         <div class="logout">
-          <li><a href="{{'logout'}}">Logout</a></li>
+          <li><form action="{{route('logout')}}"><a>Logout</a></form></li>
         </div>
       </ul>
     </div>
