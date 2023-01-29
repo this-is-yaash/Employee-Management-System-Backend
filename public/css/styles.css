@@ -90,6 +90,33 @@ button{
     border: 0px;
     background-color: rgb(226, 239, 255);
 }
+#exampleInputName1{
+    border: 0px;
+    background-color: rgb(226, 239, 255);
+}
+#exampleInputAge1{
+    border: 0px;
+    background-color: rgb(226, 239, 255);
+}
+#exampleInputPhoneNumber1{
+    border: 0px;
+    background-color: rgb(226, 239, 255);
+}
+#exampleInputDesignation1{
+    border: 0px;
+    background-color: rgb(226, 239, 255);
+}
+#exampleInputSalary1{
+    border: 0px;
+    background-color: rgb(226, 239, 255);
+}
+option{
+    background-color: white;
+}
+
+
+
+
 
 table.dataTable {
     background: red;

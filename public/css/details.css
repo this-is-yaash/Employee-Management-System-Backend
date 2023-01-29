@@ -1,5 +1,5 @@
 #table {
-    font-family: 'Trebuchet MS', sans-serif; 
+    font-family: 'Trebuchet MS', sans-serif;
     border-radius: 1em;
 }
 
@@ -40,14 +40,14 @@ th {
   border: 0px;
   background-color: #dfdfdf;
   color: rgb(53, 53, 53);
-} 
+}
 .absent {
   color: white;
   background-color: rgb(224, 0, 0);
   padding: 3px;
   border-radius: 3px;
   box-shadow: 1px 2px 3px black;
-  
+
 }
 .present {
   color: white;
@@ -56,7 +56,7 @@ th {
   border-radius: 3px;
   box-shadow: 1px 1px 3px black;
 
-  
+
 }
 .sts{
     color: rgb(33, 33, 33);
@@ -76,7 +76,7 @@ th {
   border: 0px;
   border-radius: 2px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  background: rgb(66, 184, 221);  
+  background: rgb(66, 184, 221);
 }
 #button2{
 
@@ -87,7 +87,7 @@ th {
   border: 0px;
   border-radius: 2px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  background: rgb(66, 184, 221);  
+  background: rgb(66, 184, 221);
 }
 /*Heading*/
 h1{
@@ -124,4 +124,26 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   margin: 2px 0;
   white-space: nowrap;
   justify-content:left!important;
+}
+#table_length{
+    position: relative;
+    left: 250px;
+}
+#table_filter{
+    position: relative;
+    left: -1346px;
+}
+#delemp{
+    position: absolute;
+    right: 2px;
+    top: 170px;
+    background-color: rgb(41, 41, 43);
+
+
+}
+#addemp{
+    position: absolute;
+    right: 150px;
+    top: 170px;
+    background-color: rgb(41, 41, 43);
 }

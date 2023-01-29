@@ -2,7 +2,7 @@
 <html>
 <head>
 </head>
-<title>Attendance</title>
+<title>Dashboard</title>
 
 <link rel="stylesheet" href="/css/details.css">
 <link rel="stylesheet" href="/css/navibar.css">
@@ -21,7 +21,7 @@
       <ul id="navbar">
           <li><a href="{{'dashboard'}}">Dashboard</a></li>
         <div class="logout">
-          <li><form action="{{route('logout')}}"><a>Logout</a></form></li>
+          <li><a href="{{route('logout')}}">Logout</a></li>
         </div>
       </ul>
     </div>
@@ -36,7 +36,10 @@
     </div>
   </div>
   <div class="col-10">
-    <h1>Employee Details</h1>
+    <div><h1>Employee Details</h1></div>
+    <a href="{{route('register')}}"><button class="btn btn-secondary" id="addemp">Add Employee</button></a>
+        <button class="btn btn-secondary" id="delemp">Delete Employee</button>
+
       <table id="table" class="center" style="width: 100%">
         <thead>
           <th>Employee Name</i></th>
