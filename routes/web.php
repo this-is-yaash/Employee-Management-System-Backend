@@ -2,6 +2,8 @@
 
     use Illuminate\Support\Facades\Route;
     use App\Http\Controllers\Auth\AuthController;
+    use App\Http\Controllers\userdetailController;
+
 
     /*
     |--------------------------------------------------------------------------
@@ -38,3 +40,18 @@
     });
     Route::post('register', [AuthController::class, 'register'])->name('register');
     Route::get('register', '\App\Http\Controllers\Auth\AuthController@register')->name('register');
+
+    Route::controller(AuthController::class)->group(function () {
+        Route::get('register', 'register')->name('register');
+    });
+
+    Route::get("/details", function () {
+        return view('table/userdetails');
+    });
+    Route::get("/leavetable", function () {
+        return view('table/leaverequest');
+    });
+    Route::get("/attendancetable", function () {
+        return view('table/leaverequest');
+    });
+

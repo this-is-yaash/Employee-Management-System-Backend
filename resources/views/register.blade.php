@@ -37,7 +37,7 @@
                 </div>
                 <div class="row ">
                     <div class="col-md-12">
-                        <form method="POST" action="{{route('register')}}">
+                        <form method="POST" action="{{url('register')}}">
                             @csrf
                             <div class="mb-3">
                               <label for="exampleInputEmail1" class="form-label">Email</label>
