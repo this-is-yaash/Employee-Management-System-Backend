@@ -28,9 +28,9 @@
   <div class="row">
 <div class="col-2">
     <div class="vertical-menu">
-      <a href="{{'details'}}"><i class="fa-solid fa-address-card"></i><b>Employee Details</b></a>
-      <a href="{{'attendancetable'}}"><i class="fa-solid fa-circle-check"></i><b>Employee Attendance</b></a>
-      <a href="{{'leavetable'}}"class="active"><i class="fa-sharp fa-solid fa-list-check"></i><b>Leave Request</b></a>
+      <a href="{{'dashboard'}}"><i class="fa-solid fa-address-card"></i><b>Employee Details</b></a>
+      <a href="{{'attendance'}}"><i class="fa-solid fa-circle-check"></i><b>Employee Attendance</b></a>
+      <a href="{{'request'}}"class="active"><i class="fa-sharp fa-solid fa-list-check"></i><b>Leave Request</b></a>
     </div>
   </div>
   <br>

@@ -1,0 +1,46 @@
+<?php
+namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+use App\Models\UserDetail;
+class DatabaseController extends Controller
+{
+    public function index()
+    {
+        $user_info= UserDetail::all();
+        return view('table.table_dashboard')->with('user_info', $user_info);
+    }
+
+    public function create()
+    {
+        return view('register');
+    }
+    public function store(Request $request)
+    {
+        $input =$request->all();
+        UserDetail::create($input);
+        return redirect('register','dashboard ')->with('flash_message', 'Employee Added!');
+
+    }
+    public function show($id)
+    {
+        $user_info=UserDetail::find($id);
+        return view('user_info.show')->with('user_info', $user_info);
+    }
+    public function edit($id)
+    {
+        $user_info= UserDetail::find($id);
+        return view('user_info.edit')->with('user_info', $user_info);
+    }
+    public function update(Request $request, $id)
+    {
+        $user_info = UserDetail::find($id);
+        $input = $request->all();
+        $user_info->update($input);
+        return redirect('user_info')->with('flash_message', 'Employee Updated!');
+    }
+    public function destroy($id)
+    {
+        UserDetail::destroy($id);
+        return view('user_info')->with('flash_message', 'Employee Deleted!');
+    }
+}

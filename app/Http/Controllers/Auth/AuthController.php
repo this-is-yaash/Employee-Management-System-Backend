@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
+use App\Models\user_details;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -44,5 +45,29 @@ class AuthController extends Controller
     }
     public function register(){
         return view('register');
+    }
+    public function validate_registration(Request $request){
+        $request->validate([
+            'employee_name'     => 'required',
+            'email'             => 'required',
+            'designation'       => 'required',
+            'phone_number'      => 'required',
+            'salary'            => 'required',
+            'age'               => 'required',
+            'dob'               => 'required'
+        ]);
+
+        $data = $request->all();
+
+        user_details::create([
+            'employee_name' => $data['name'],
+            'email'         => $data['email'],
+            'designation'   => $data['designation'],
+            'phone_number'  => $data['phone_number'],
+            'salary'        => $data['salary'],
+            'age'           => $data['age'],
+            'dob'           => $data['dob']
+        ]);
+        return redirect('dashboard');
     }
 }

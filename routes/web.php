@@ -2,8 +2,7 @@
 
     use Illuminate\Support\Facades\Route;
     use App\Http\Controllers\Auth\AuthController;
-    use App\Http\Controllers\userdetailController;
-
+    use App\Http\Controllers\DatabaseController;
 
     /*
     |--------------------------------------------------------------------------
@@ -19,21 +18,11 @@
     Route::get('/', function () {
         return view('/auth/login');
     });
+    Route::resource('/dashboard', DatabaseController::class);
+
 
     Route::post('/auth/login', [AuthController::class, 'login'])->name('login');
     Route::get('logout', '\App\Http\Controllers\Auth\AuthController@logout')->name('logout');
-
-
-    Route::get("/dashboard", function () {
-        return view('emp_dashboard');
-    });
-
-    Route::get("/attendance", function () {
-        return view('emp_attendance');
-    });
-    Route::get("/request", function () {
-        return view('emp_request');
-    });
 
     Route::get("/register", function () {
         return view('register');
@@ -44,14 +33,17 @@
     Route::controller(AuthController::class)->group(function () {
         Route::get('register', 'register')->name('register');
     });
+    /*
+    Route::get("/dashboard", function () {
+            return view('table/table_dashboard');
+        });
+    */
 
-    Route::get("/details", function () {
-        return view('table/userdetails');
+    Route::get("/request", function () {
+        return view('table/table_request');
     });
-    Route::get("/leavetable", function () {
-        return view('table/leaverequest');
-    });
-    Route::get("/attendancetable", function () {
-        return view('table/leaverequest');
+    Route::get("/attendance", function () {
+        return view('table/table_attendance');
     });
 
+    Route::resource('/dashboard', DatabaseController::class);

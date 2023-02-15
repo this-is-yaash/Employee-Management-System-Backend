@@ -17,7 +17,7 @@
       <td>7 June 2022</td>
       <td>2 Days</td>
       <td>Going to Hospital</td>
-      <td><span class="sts">• Pending</span></td>
+      <td><span class="sts">•  Pending</span></td>
       <td>
         <button type="button1" class="btn btn-success">Approve</button>
         <button type="button2" class="btn btn-danger">Decline</button>
