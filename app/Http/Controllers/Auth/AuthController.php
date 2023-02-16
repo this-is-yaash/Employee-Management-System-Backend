@@ -56,18 +56,5 @@ class AuthController extends Controller
             'age'               => 'required',
             'dob'               => 'required'
         ]);
-
-        $data = $request->all();
-
-        user_details::create([
-            'employee_name' => $data['name'],
-            'email'         => $data['email'],
-            'designation'   => $data['designation'],
-            'phone_number'  => $data['phone_number'],
-            'salary'        => $data['salary'],
-            'age'           => $data['age'],
-            'dob'           => $data['dob']
-        ]);
-        return redirect('dashboard');
     }
 }

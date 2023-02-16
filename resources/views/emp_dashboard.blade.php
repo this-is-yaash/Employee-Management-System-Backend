@@ -38,8 +38,6 @@
   <div class="col-10">
     <div><h1>Employee Details</h1></div>
     <a href="{{route('register')}}"><button class="btn btn-secondary" id="addemp">Add Employee</button></a>
-    <button class="btn btn-secondary" id="delemp">Delete Employee</button>
-
     @yield('tablecontent')
 
 </div>

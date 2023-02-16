@@ -25,5 +25,6 @@ class UsersSeeder extends Seeder
             foreach ($data as $key => $value) {
                 DB::table('user_info')->insert($value);
             }
+
     }
 }

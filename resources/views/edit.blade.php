@@ -32,24 +32,25 @@
         <div class="d-flex align-items-center justify-content-center h-100"><!-- align-items-center(align vertical)justify-content-center(align horizontal) -->
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Add Employee</h1>
+                    <h1>Edit Employee</h1>
                 </div>
                 <div class="row ">
                     <div class="col-md-12">
-                        <form method="POST" action="{{url('dashboard')}}">
+                        <form method="POST" action="{{url('dashboard'. $user_info->id)}}">
                             {!! csrf_field() !!}
+                            @method("PATCH")
                             <div class="mb-3">
                                 <label for="exampleInputName1" class="form-label">Name</label>
-                                <input type="text" name="employee_name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp">
+                                <input type="text" value="{{$user_info->employee_name}}" name="employee_name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp">
                               </div>
                             <div class="mb-3">
                               <label for="exampleInputEmail1" class="form-label">Email</label>
-                              <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              <input type="text" value="{{$user_info->email}}" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputDesignation"  class="form-label">Designation</label>
-                                <select class="form-select" aria-label="Default select example" id="exampleInputDesignation1" name="designation">
-                                    <option selected>Web Designer</option>
+                                <select class="form-select" aria-label="Default select example" value="{{$user_info->designation}}" id="exampleInputDesignation1" name="designation">
+                                        <option >{{$user_info->designation}}</option>
                                         <option>Web Developer</option>
                                         <option>Tester</option>
                                         <option>Android Developer</option>
@@ -58,21 +59,21 @@
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPhoneNumber1" class="form-label">Phone Number</label>
-                                <input type="text" name="phone_number" class="form-control" id="exampleInputPhoneNumber1" aria-describedby="phHelp">
+                                <input type="text" name="phone_number" value="{{$user_info->phone_number}}" class="form-control" id="exampleInputPhoneNumber1" aria-describedby="phHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputSalary1" class="form-label">Salary</label>
-                                <input type="text" name="salary" class="form-control" id="exampleInputSalary1" aria-describedby="phHelp">
+                                <input type="text" name="salary" class="form-control" value="{{$user_info->salary}}" id="exampleInputSalary1" aria-describedby="phHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputAge" class="form-label">Age</label>
-                                <input type="text" name="age" class="form-control" id="exampleInputAge1" aria-describedby="ageHelp">
+                                <input type="text" name="age" class="form-control" value="{{$user_info->age}}" id="exampleInputAge1" aria-describedby="ageHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputAge" class="form-label">DOB</label>
-                                <input type="text" name="dob" class="form-control" id="exampleInputDOB1" aria-describedby="dobHelp">
+                                <input type="text" name="dob" class="form-control" value="{{$user_info->dob}}"id="exampleInputDOB1" aria-describedby="dobHelp">
                             </div>
-                                <button type="submit" value="Save" class="btn btn-secondary">Register</button>
+                                <button type="submit" value="update" class="btn btn-secondary">Submit</button>
                           </form>
                     </div>
                 </div>

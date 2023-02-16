@@ -18,9 +18,6 @@
     Route::get('/', function () {
         return view('/auth/login');
     });
-    Route::resource('/dashboard', DatabaseController::class);
-
-
     Route::post('/auth/login', [AuthController::class, 'login'])->name('login');
     Route::get('logout', '\App\Http\Controllers\Auth\AuthController@logout')->name('logout');
 
@@ -47,3 +44,7 @@
     });
 
     Route::resource('/dashboard', DatabaseController::class);
+
+    Route::get("/edit", function(){
+        return view('edit');
+    });

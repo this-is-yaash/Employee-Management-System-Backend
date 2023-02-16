@@ -12,13 +12,13 @@ class DatabaseController extends Controller
 
     public function create()
     {
-        return view('register');
+        return view('/register');
     }
     public function store(Request $request)
     {
         $input =$request->all();
         UserDetail::create($input);
-        return redirect('register','dashboard ')->with('flash_message', 'Employee Added!');
+        return redirect('/dashboard ')->with('flash_message', 'Employee Added!');
 
     }
     public function show($id)
@@ -29,18 +29,18 @@ class DatabaseController extends Controller
     public function edit($id)
     {
         $user_info= UserDetail::find($id);
-        return view('user_info.edit')->with('user_info', $user_info);
+        return view('/edit')->with('user_info', $user_info);
     }
     public function update(Request $request, $id)
     {
         $user_info = UserDetail::find($id);
         $input = $request->all();
         $user_info->update($input);
-        return redirect('user_info')->with('flash_message', 'Employee Updated!');
+        return redirect('/dashboard')->with('flash_message', 'Employee Updated!');
     }
     public function destroy($id)
     {
         UserDetail::destroy($id);
-        return view('user_info')->with('flash_message', 'Employee Deleted!');
+        return redirect('/dashboard')->with('flash_message', 'Employee Deleted!');
     }
 }
