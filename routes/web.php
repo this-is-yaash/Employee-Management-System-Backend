@@ -48,3 +48,6 @@
     Route::get("/edit", function(){
         return view('edit');
     });
+    Route::get("/view", function(){
+        return view('table/view');
+    });

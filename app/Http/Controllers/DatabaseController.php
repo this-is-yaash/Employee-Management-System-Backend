@@ -24,7 +24,7 @@ class DatabaseController extends Controller
     public function show($id)
     {
         $user_info=UserDetail::find($id);
-        return view('user_info.show')->with('user_info', $user_info);
+        return view('/table/view')->with('user_info', $user_info);
     }
     public function edit($id)
     {

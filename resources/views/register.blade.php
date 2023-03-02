@@ -70,7 +70,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputAge" class="form-label">DOB</label>
-                                <input type="text" name="dob" class="form-control" id="exampleInputDOB1" aria-describedby="dobHelp">
+                                <input type="date" name="dob" class="form-control" id="exampleInputDOB1" aria-describedby="dobHelp">
                             </div>
                                 <button type="submit" value="Save" class="btn btn-secondary">Register</button>
                           </form>

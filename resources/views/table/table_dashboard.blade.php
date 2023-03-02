@@ -21,7 +21,7 @@
                 <td>{{$item->age}}</td>
                 <td>{{$item->dob}}</td>
                 <td>
-                    <a href="{{ url('/dashboard/' . $item->id) }}" title="View Employee"><button class="btn btn-info btn-sm disabled" aria-disabled="true"><i aria-hidden="true"></i> View</button></a>
+                    <a href="{{ url('/dashboard/' . $item->id) }}" title="View Employee"><button class="btn btn-info btn-sm"><i aria-hidden="true"></i> View</button></a>
                     <a href="{{ url("/dashboard/" . $item->id . '/edit') }}" title="Edit Employee"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</button></a>
                     <form method="POST" action="{{ url('/dashboard' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                         {{ method_field('DELETE') }}

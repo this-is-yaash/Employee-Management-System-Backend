@@ -110,13 +110,13 @@ button{
     border: 0px;
     background-color: rgb(226, 239, 255);
 }
+#exampleInputDOB1{
+    border: 0px;
+    background-color: rgb(226, 239, 255);
+}
 option{
     background-color: white;
 }
-
-
-
-
 
 table.dataTable {
     background: red;

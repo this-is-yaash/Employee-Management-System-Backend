@@ -36,7 +36,7 @@
                 </div>
                 <div class="row ">
                     <div class="col-md-12">
-                        <form method="POST" action="{{url('dashboard'. $user_info->id)}}">
+                        <form method="POST" action="{{url('dashboard/'. $user_info->id)}}">
                             {!! csrf_field() !!}
                             @method("PATCH")
                             <div class="mb-3">
@@ -70,8 +70,8 @@
                                 <input type="text" name="age" class="form-control" value="{{$user_info->age}}" id="exampleInputAge1" aria-describedby="ageHelp">
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputAge" class="form-label">DOB</label>
-                                <input type="text" name="dob" class="form-control" value="{{$user_info->dob}}"id="exampleInputDOB1" aria-describedby="dobHelp">
+                                <label for="exampleInputDOB" class="form-label">DOB</label>
+                                <input type="date" name="dob" class="form-control" value="{{$user_info->dob}}"id="exampleInputDOB1" aria-describedby="dobHelp">
                             </div>
                                 <button type="submit" value="update" class="btn btn-secondary">Submit</button>
                           </form>
