@@ -17,8 +17,8 @@ return new class extends Migration
                     $table->string('salary');
                     $table->string('age');
                     $table->string('dob');
+                    $table->string('image');
                     $table->timestamps();
-                    $table->dropColumn('id');
         });
     }
 

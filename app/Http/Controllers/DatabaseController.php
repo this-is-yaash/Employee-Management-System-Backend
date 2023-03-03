@@ -24,7 +24,7 @@ class DatabaseController extends Controller
     public function show($id)
     {
         $user_info=UserDetail::find($id);
-        return view('/table/view')->with('user_info', $user_info);
+        return view('table/view')->with('user_info', $user_info);
     }
     public function edit($id)
     {
@@ -43,4 +43,22 @@ class DatabaseController extends Controller
         UserDetail::destroy($id);
         return redirect('/dashboard')->with('flash_message', 'Employee Deleted!');
     }
+
+    //Store image
+    public function storeImage(Request $request){
+        $data= new UserDetail();
+
+        if($request->file('image')){
+            $file= $request->file('image');
+            $filename= date('YmdHi').$file->getClientOriginalName();
+            $file-> move(public_path('public/Image'), $filename);
+            $data['image']= $filename;
+        }
+    }
+		//View image
+    public function viewImage(){
+        $imageData= UserDetail::all();
+        return view('view', compact('imageData'));
+    }
 }
+

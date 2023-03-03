@@ -1,84 +1,120 @@
-<html lang="en">
-    <head>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<title>Dashboard</title>
 
-    </head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <title>View Employee</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <body>
-        <style>
-            h1{
-                color: rgb(60, 47, 148);
-                text-align: left;
-                font-size: 50px;
-                font-weight:lighter;
-                font-family: 'Trebuchet MS', sans-serif;
-            }
-        </style>
-        @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
+<link rel="stylesheet" href="/css/details.css">
+<link rel="stylesheet" href="/css/navibar.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+<body>
+  <div class="col-12">
+    <div class="row">
+      <ul id="navbar">
+          <li><a href="{{'dashboard'}}">Dashboard</a></li>
+        <div class="logout">
+          <li><a href="{{route('logout')}}">Logout</a></li>
         </div>
-    @endif
-        <div class="d-flex align-items-center justify-content-center h-100"><!-- align-items-center(align vertical)justify-content-center(align horizontal) -->
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>View Employee Details</h1>
-                </div>
-                <div class="row ">
-                    <div class="col-md-12">
-                        <form method="POST" action="{{url('dashboard/'. $user_info->id)}}">
-                            {!! csrf_field() !!}
-                            @method("PATCH")
-                            <div class="mb-3">
-                                <label for="exampleInputName1" class="form-label">Name</label>
-                                <input disabled="disabled" type="text" value="{{$user_info->employee_name}}" name="employee_name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp">
+      </ul>
+    </div>
+  </div>
+  <br>
+  <div class="align-item-center justify-content-center h-100">
+    <div class="row">
+        <div class="col-12">
+            <div><h1>View Employee</h1></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+
+        </div>
+        <div class="col-2">
+
+        </div>
+        <div class="col-6">
+            <div class="col-12">
+                <div class="col-8  ">
+                    <div class="col-md-10">
+                        <div class="card mb-5">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-sm-3">
+                                <h6 class="mb-0">Full Name</h6>
                               </div>
-                            <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Email</label>
-                              <input disabled="disabled" type="text" value="{{$user_info->email}}" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              <div class="col-sm-9 text-secondary">
+                                {{$user_info->employee_name}}
+                              </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="exampleInputDesignation"  class="form-label">Designation</label>
-                                <select disabled="disabled"class="form-select" aria-label="Default select example" value="{{$user_info->designation}}" id="exampleInputDesignation1" name="designation">
-                                        <option >{{$user_info->designation}}</option>
-                                        <option>Web Developer</option>
-                                        <option>Tester</option>
-                                        <option>Android Developer</option>
-                                        <option>iOS Developer</option>
-                                  </select>
+                            <hr>
+                            <div class="row">
+                              <div class="col-sm-3">
+                                <h6 class="mb-0">Email</h6>
+                              </div>
+                              <div class="col-sm-9 text-secondary">
+                                {{$user_info->email}}
+                              </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="exampleInputPhoneNumber1" class="form-label">Phone Number</label>
-                                <input disabled="disabled" type="text" name="phone_number" value="{{$user_info->phone_number}}" class="form-control" id="exampleInputPhoneNumber1" aria-describedby="phHelp">
+                            <hr>
+                            <div class="row">
+                              <div class="col-sm-3">
+                                <h6 class="mb-0">Phone</h6>
+                              </div>
+                              <div class="col-sm-9 text-secondary">
+                              {{$user_info->phone_number}}
+                              </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="exampleInputSalary1" class="form-label">Salary</label>
-                                <input disabled="disabled" type="text" name="salary" class="form-control" value="{{$user_info->salary}}" id="exampleInputSalary1" aria-describedby="phHelp">
+                            <hr>
+                            <div class="row">
+                              <div class="col-sm-3">
+                                <h6 class="mb-0">Designation</h6>
+                              </div>
+                              <div class="col-sm-9 text-secondary">
+                                {{$user_info->designation}}
                             </div>
-                            <div class="mb-3">
-                                <label for="exampleInputAge" class="form-label">Age</label>
-                                <input disabled="disabled" type="text" name="age" class="form-control" value="{{$user_info->age}}" id="exampleInputAge1" aria-describedby="ageHelp">
                             </div>
-                            <div class="mb-3">
-                                <label for="exampleInputDOB" class="form-label">DOB</label>
-                                <input disabled="disabled" type="text" name="dob" class="form-control" value="{{$user_info->dob}}"id="exampleInputDOB1" aria-describedby="dobHelp">
+                            <hr>
+                            <div class="row">
+                              <div class="col-sm-3">
+                                <h6 class="mb-0">Salary</h6>
+                              </div>
+                              <div class="col-sm-9 text-secondary">
+                                {{$user_info->salary}}
                             </div>
-                               <a href="/dashboard"><button type="button" value="update" class="btn btn-secondary">Back</button><i class="fa-solid fa-arrow-left"></i></a>
-                          </form>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                  <h6 class="mb-0">Age</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                  {{$user_info->age}}
+                            </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                  <h6 class="mb-0">DOB</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                  {{$user_info->dob}}
+                              </div>
+                              </div>
+                          </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+          </div>
+      </div>
+  </div>
         </div>
-
     </body>
 </html>

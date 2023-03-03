@@ -54,7 +54,7 @@
                                         <option>Tester</option>
                                         <option>Android Developer</option>
                                         <option>iOS Developer</option>
-                                  </select>
+                                </select>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPhoneNumber1" class="form-label">Phone Number</label>
@@ -71,6 +71,10 @@
                             <div class="mb-3">
                                 <label for="exampleInputAge" class="form-label">DOB</label>
                                 <input type="date" name="dob" class="form-control" id="exampleInputDOB1" aria-describedby="dobHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputImage" class="form-label">Profile</label>
+                                <input type="file" name="image" class="form-control" id="exampleInputImage1" aria-describedby="ImageHelp">
                             </div>
                                 <button type="submit" value="Save" class="btn btn-secondary">Register</button>
                           </form>

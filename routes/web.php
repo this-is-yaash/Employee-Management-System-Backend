@@ -1,4 +1,4 @@
-    <?php
+<?php
 
     use Illuminate\Support\Facades\Route;
     use App\Http\Controllers\Auth\AuthController;
@@ -46,8 +46,19 @@
     Route::resource('/dashboard', DatabaseController::class);
 
     Route::get("/edit", function(){
-        return view('edit');
+        return view('/edit');
     });
     Route::get("/view", function(){
         return view('table/view');
     });
+
+
+//For adding an image
+Route::get('/add-image',[DatabaseController::class,'addImage'])->name('images.add');
+
+//For storing an image
+Route::post('/store-image',[DatabaseController::class,'storeImage'])
+->name('images.store');
+
+//For showing an image
+Route::get('/view-image',[DatabaseController::class,'viewImage'])->name('images.view');
