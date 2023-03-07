@@ -36,7 +36,7 @@
                 </div>
                 <div class="row ">
                     <div class="col-md-12">
-                        <form method="POST" action="{{url('dashboard')}}">
+                        <form method="POST" action="{{url('dashboard')}}" enctype="multipart/form-data">
                             {!! csrf_field() !!}
                             <div class="mb-3">
                                 <label for="exampleInputName1" class="form-label">Name</label>

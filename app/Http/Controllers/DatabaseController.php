@@ -51,7 +51,7 @@ class DatabaseController extends Controller
         if($request->file('image')){
             $file= $request->file('image');
             $filename= date('YmdHi').$file->getClientOriginalName();
-            $file-> move(public_path('public/Image'), $filename);
+            $file-> move(public_path('/Image'), $filename);
             $data['image']= $filename;
         }
     }
