@@ -6,6 +6,7 @@
 
 <link rel="stylesheet" href="/css/details.css">
 <link rel="stylesheet" href="/css/navibar.css">
+<link rel="stylesheet" href="/css/image.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -33,12 +34,13 @@
             <div><h1>View Employee</h1></div>
         </div>
     </div>
+    <br>
     <div class="row">
         <div class="col-4">
 
         </div>
         <div class="col-2">
-
+            <img src="{{ url('Image/'.$user_info->image) }}" alt="Profile Picture">
         </div>
         <div class="col-6">
             <div class="col-12">

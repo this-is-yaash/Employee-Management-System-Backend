@@ -3,6 +3,7 @@
     use Illuminate\Support\Facades\Route;
     use App\Http\Controllers\Auth\AuthController;
     use App\Http\Controllers\DatabaseController;
+use Monolog\Handler\RotatingFileHandler;
 
     /*
     |--------------------------------------------------------------------------
@@ -52,6 +53,15 @@
         return view('table/view');
     });
 
+    Route::get("/leaverequest",function(){
+        return view('employee/emp_leavereq');
+    });
+    Route::get("/listofleave",function(){
+        return view('employee/emp_listleave');
+    });
+    Route::get("profile",function(){
+        return view('employee/content/emp_profile');
+    });
 
 //For adding an image
 Route::get('/add-image',[DatabaseController::class,'addImage'])->name('images.add');
@@ -62,3 +72,5 @@ Route::post('/store-image',[DatabaseController::class,'storeImage'])
 
 //For showing an image
 Route::get('/view-image',[DatabaseController::class,'viewImage'])->name('images.view');
+
+Route::post('register',[DatabaseController::class,'imageUpload']);

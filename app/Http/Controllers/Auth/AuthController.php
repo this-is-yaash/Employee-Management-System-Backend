@@ -50,11 +50,13 @@ class AuthController extends Controller
         $request->validate([
             'employee_name'     => 'required',
             'email'             => 'required',
+            'password'          => 'required',
             'designation'       => 'required',
             'phone_number'      => 'required',
             'salary'            => 'required',
             'age'               => 'required',
-            'dob'               => 'required'
+            'dob'               => 'required',
+            'image'             => 'required'
         ]);
     }
 }
