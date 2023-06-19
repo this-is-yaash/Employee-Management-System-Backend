@@ -1,10 +1,9 @@
 <?php
-
     use Illuminate\Support\Facades\Route;
     use App\Http\Controllers\Auth\AuthController;
     use App\Http\Controllers\DatabaseController;
-use GuzzleHttp\Middleware;
-use Monolog\Handler\RotatingFileHandler;
+    use GuzzleHttp\Middleware;
+    use Monolog\Handler\RotatingFileHandler;
 
     /*
     |--------------------------------------------------------------------------
@@ -17,7 +16,7 @@ use Monolog\Handler\RotatingFileHandler;
     |
     */
 
-    Route::group(['middleware'=>'web'],function(){
+    Route::group(['Middleware'=>'web'],function(){
         Route::get('/', function () {
             return view('/auth/login');
         });

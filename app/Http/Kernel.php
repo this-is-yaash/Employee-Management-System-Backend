@@ -45,13 +45,13 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 
+        'customAuth'=>[
+            \App\Http\Middleware\UserValidation::class,
+        ]
+
         // 'AuthCheck' => [
         //     \App\Http\Middleware\AuthCheck::class
         // ]
-
-        'CustomAuth' => [
-            \App\Http\Middleware\CustomAuth::class
-        ]
     ];
 
     /**

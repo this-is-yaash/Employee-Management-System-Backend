@@ -20,11 +20,14 @@ class UserValidation
     public function handle(Request $request, Closure $next): Response
     {
         $path=$request->path();
-        if(($path=="login" || $path="register") && (Session::get('user')))
+        if(($path=="login") && (Session::get('users')))
         {
-            return redirect('/');
-        };
+            return redirect('/dashboard');
+        }
+        else if ($path!='login' && Session::get('users'))
+        {
+            return redirect('/login');
+        }
         return $next($request);
-
     }
 }
