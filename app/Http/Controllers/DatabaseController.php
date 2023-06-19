@@ -18,22 +18,20 @@ class DatabaseController extends Controller
     }
     public function store(Request $request)
     {
-        $input =$request->all();
+        $input = $request->all();
 
         $request->validate([
-            'image'=>'image|mimes:jpeg,jpg,png|max:2048'
+            'image' => 'image|mimes:jpeg,jpg,png|max:2048'
         ]);
-        $imageName =time().'.'.$request->image->extension();
-        $name = $input['image']->getClientOriginalName();
 
-        $request->image->move(public_path('/Image'), $name);
-        $input['image'] = $name;
+        $imageName = time().'.'.$request->file('image')->extension();
+        $name = $request->file('image')->getClientOriginalName();
 
-
+        $request->file('image')->move(public_path('Image'), $imageName);
+        $input['image'] = $imageName;
 
         UserDetail::create($input);
-        return redirect('/dashboard ')->with('flash_message', 'Employee Added!');
-
+        return redirect('/dashboard')->with('flash_message', 'Employee Added!');
     }
     public function show($id)
     {

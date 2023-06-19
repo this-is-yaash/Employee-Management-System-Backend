@@ -77,6 +77,10 @@
                                 <label for="exampleInputDOB" class="form-label">DOB</label>
                                 <input type="date" name="dob" class="form-control" value="{{$user_info->dob}}"id="exampleInputDOB1" aria-describedby="dobHelp">
                             </div>
+                            <div class="mb-3">
+                                <label for="exampleInputImage" class="form-label">Profile</label>
+                                <input type="file" name="image" class="form-control" value="{{$user_info->image}}" id="exampleInputImage1" aria-describedby="ImageHelp">
+                            </div>
                                 <button type="submit" value="update" class="btn btn-secondary">Submit</button>
                           </form>
                     </div>

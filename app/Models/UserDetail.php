@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class UserDetail extends Model
 {
     protected $table = 'user_info';
-    protected $fillable = ['employee_name', 'email','password', 'designation', 'phone_number', 'salary', 'age', 'dob','image'];
+    protected $fillable = ['id','employee_name', 'email','password', 'designation', 'phone_number', 'salary', 'age', 'dob','image'];
 }
