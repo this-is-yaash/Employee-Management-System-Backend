@@ -17,11 +17,11 @@ class UserValidation
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle($request, Closure $next)
+    public function handle(Request $request, Closure $next)
     {
-        if(!session()->has('data'))
+        if(!session()->has('user'))
         {
-            return redirect();
+            return redirect('/');
         }
         return $next($request);
     }

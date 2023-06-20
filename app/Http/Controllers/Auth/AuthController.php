@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
-use App\Models\user_details;
+use App\Models\UserDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -34,7 +34,7 @@ class AuthController extends Controller
             'password'  => $data['password']
         );
         if (Auth::attempt($user_data)) {
-            $request->session()->put('data',$request->input());
+            $request->session()->put('user',$request->input());
             return redirect('/dashboard');
         }else{
             return back()->with('error', 'Invalid Credentials!');
@@ -42,6 +42,7 @@ class AuthController extends Controller
     }
     public function logout(Request $request){
         Auth::logout();
+        session()->forget('user');
         return redirect('/');
     }
     public function register(){
