@@ -17,16 +17,11 @@ class UserValidation
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle($request, Closure $next)
     {
-        $path=$request->path();
-        if(($path=="login") && (Session::get('users')))
+        if(!session()->has('data'))
         {
-            return redirect('/dashboard');
-        }
-        else if ($path!='login' && Session::get('users'))
-        {
-            return redirect('/login');
+            return redirect();
         }
         return $next($request);
     }

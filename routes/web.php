@@ -2,7 +2,7 @@
     use Illuminate\Support\Facades\Route;
     use App\Http\Controllers\Auth\AuthController;
     use App\Http\Controllers\DatabaseController;
-    use GuzzleHttp\Middleware;
+        use GuzzleHttp\Middleware;
     use Monolog\Handler\RotatingFileHandler;
 
     /*
@@ -15,8 +15,7 @@
     | contains the "web" middleware group. Now create something great!
     |
     */
-
-    Route::group(['Middleware'=>'web'],function(){
+    Route::group(['middleware'=>'CustomAuth'], function(){
         Route::get('/', function () {
             return view('/auth/login');
         });
@@ -78,6 +77,9 @@
     Route::get('/view-image',[DatabaseController::class,'viewImage'])->name('images.view');
 
     Route::post('register',[DatabaseController::class,'imageUpload']);
+
+
+    Route::group(['Middleware'=>'CustomAuth'],function(){
+
     });
-
-
+    });

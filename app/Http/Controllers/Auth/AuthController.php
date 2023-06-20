@@ -34,6 +34,7 @@ class AuthController extends Controller
             'password'  => $data['password']
         );
         if (Auth::attempt($user_data)) {
+            $request->session()->put('data',$request->input());
             return redirect('/dashboard');
         }else{
             return back()->with('error', 'Invalid Credentials!');
