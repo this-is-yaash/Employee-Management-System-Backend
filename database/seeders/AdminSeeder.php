@@ -1,14 +1,12 @@
 <?php
 
 namespace Database\Seeders;
-
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB; // Import the DB facade
-use Illuminate\Support\Facades\Hash;
-use League\CommonMark\Extension\Table\Table;
 
-class UserSeeder extends Seeder
+class AdminSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,9 +15,10 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('admin')->insert([
+        //
+        DB::table('users')->insert([
             'email'=>'admin@gmail.com',
-            'password'=>Hash::make('admin')
+            'password'=>Hash::make('users')
         ]);
     }
 }

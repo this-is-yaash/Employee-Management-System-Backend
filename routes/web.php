@@ -62,27 +62,28 @@
         Route::get("/view", function(){
             return view('table/view');
         });
+
+
+        //For adding an image
+        Route::get('/add-image',[DatabaseController::class,'addImage'])->name('images.add');
+
+        //For storing an image
+        Route::post('/store-image',[DatabaseController::class,'storeImage'])
+        ->name('images.store');
+
+        //For showing an image
+        Route::get('/view-image',[DatabaseController::class,'viewImage'])->name('images.view');
+
+        Route::post('register',[DatabaseController::class,'imageUpload']);
+
+    });
     //Employee
-        Route::get("/leaverequest",function(){
-            return view('employee/emp_leavereq');
-        });
-        Route::get("/listofleave",function(){
-            return view('employee/emp_listleave');
-        });
-        Route::get("profile",function(){
-            return view('employee/content/emp_profile');
-        });
-
-    //For adding an image
-    Route::get('/add-image',[DatabaseController::class,'addImage'])->name('images.add');
-
-    //For storing an image
-    Route::post('/store-image',[DatabaseController::class,'storeImage'])
-    ->name('images.store');
-
-    //For showing an image
-    Route::get('/view-image',[DatabaseController::class,'viewImage'])->name('images.view');
-
-    Route::post('register',[DatabaseController::class,'imageUpload']);
-
+    Route::get("/leaverequest",function(){
+        return view('employee/emp_leavereq');
+    });
+    Route::get("/listofleave",function(){
+        return view('employee/emp_listleave');
+    });
+    Route::get("profile",function(){
+        return view('employee/content/emp_profile');
     });

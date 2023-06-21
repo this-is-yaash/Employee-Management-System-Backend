@@ -39,7 +39,7 @@
                             {!! csrf_field() !!}
                             <div class="mb-3">
                                 <label for="exampleInputName1" class="form-label">Name</label>
-                                <input type="text" name="employee_name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp">
+                                <input type="text" name="user_name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp">
                               </div>
                             <div class="mb-3">
                               <label for="exampleInputEmail1" class="form-label">Email</label>
@@ -49,6 +49,19 @@
                                 <label for="exampleInputPassword1" class="form-label">Password</label>
                                 <input type="password" name="password" class="form-control" id="exampleInputPassword1" aria-describedby="passwordHelp">
                               </div>
+                            <div class="mb-3">
+                                <label for="exampleInputRole"  class="form-label">Role</label>
+                                <select class="form-select" aria-label="Default select example" id="exampleInputRole1" name="role">
+                                    <option selected>Employee</option>
+                                        <option>HR Manager</option>
+                                        <option>Operations Manager</option>
+                                        <option>Salaes Manager</option>
+                                        <option>Office Manager Engineer</option>
+                                        <option>Admin Assistant</option>
+                                        <option>Art Director</option>
+                                        <option>Customer Service Rep</option>
+                                </select>
+                            </div>
                             <div class="mb-3">
                                 <label for="exampleInputDesignation"  class="form-label">Designation</label>
                                 <select class="form-select" aria-label="Default select example" id="exampleInputDesignation1" name="designation">

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
-use App\Models\UserDetail;
+use App\Models\AdminDetails;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -50,9 +50,10 @@ class AuthController extends Controller
     }
     public function validate_registration(Request $request){
         $request->validate([
-            'employee_name'     => 'required',
+            'user_name'     => 'required',
             'email'             => 'required',
             'password'          => 'required',
+            'role'              => 'required',
             'designation'       => 'required',
             'phone_number'      => 'required',
             'salary'            => 'required',

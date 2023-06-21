@@ -40,7 +40,7 @@
 
         </div>
         <div class="col-2">
-            <img src="{{ url('Image/'.$user_info->image) }}" alt="Profile Picture">
+            <img src="{{ url('Image/'.$user_details->image) }}" alt="Profile Picture">
         </div>
         <div class="col-6">
             <div class="col-12">
@@ -53,7 +53,7 @@
                                 <h6 class="mb-0">Full Name</h6>
                               </div>
                               <div class="col-sm-9 text-secondary">
-                                {{$user_info->employee_name}}
+                                {{$user_details->user_name}}
                               </div>
                             </div>
                             <hr>
@@ -62,7 +62,7 @@
                                 <h6 class="mb-0">Email</h6>
                               </div>
                               <div class="col-sm-9 text-secondary">
-                                {{$user_info->email}}
+                                {{$user_details->email}}
                               </div>
                             </div>
                             <hr>
@@ -71,16 +71,25 @@
                                 <h6 class="mb-0">Phone</h6>
                               </div>
                               <div class="col-sm-9 text-secondary">
-                              {{$user_info->phone_number}}
+                              {{$user_details->phone_number}}
                               </div>
                             </div>
                             <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                  <h6 class="mb-0">Role</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                  {{$user_details->role}}
+                              </div>
+                              </div>
+                              <hr>
                             <div class="row">
                               <div class="col-sm-3">
                                 <h6 class="mb-0">Designation</h6>
                               </div>
                               <div class="col-sm-9 text-secondary">
-                                {{$user_info->designation}}
+                                {{$user_details->designation}}
                             </div>
                             </div>
                             <hr>
@@ -89,7 +98,7 @@
                                 <h6 class="mb-0">Salary</h6>
                               </div>
                               <div class="col-sm-9 text-secondary">
-                                {{$user_info->salary}}
+                                {{$user_details->salary}}
                             </div>
                             </div>
                             <hr>
@@ -98,7 +107,7 @@
                                   <h6 class="mb-0">Age</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                  {{$user_info->age}}
+                                  {{$user_details->age}}
                             </div>
                             </div>
                             <hr>
@@ -107,7 +116,7 @@
                                   <h6 class="mb-0">DOB</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                  {{$user_info->dob}}
+                                  {{$user_details->dob}}
                               </div>
                               </div>
                           </div>
