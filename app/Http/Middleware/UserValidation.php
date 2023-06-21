@@ -5,8 +5,6 @@ use Illuminate\Support\Facades\Session;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
-
-
 class UserValidation
 {
     /**
@@ -19,7 +17,7 @@ class UserValidation
      */
     public function handle(Request $request, Closure $next)
     {
-        if(!session()->has('user'))
+        if(!session()->has('admin'))
         {
             return redirect('/');
         }

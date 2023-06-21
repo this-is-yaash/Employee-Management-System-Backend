@@ -55,13 +55,8 @@
                                 <label for="exampleInputRole"  class="form-label">Role</label>
                                 <select class="form-select" aria-label="Default select example" id="exampleInputRole1" name="role">
                                     <option selected>Employee</option>
-                                        <option>HR Manager</option>
-                                        <option>Operations Manager</option>
-                                        <option>Salaes Manager</option>
-                                        <option>Office Manager Engineer</option>
-                                        <option>Admin Assistant</option>
-                                        <option>Art Director</option>
-                                        <option>Customer Service Rep</option>
+                                        <option>Manager</option>
+                                        <option>Admin</option>
                                 </select>
                             </div>
                             <div class="mb-3">
