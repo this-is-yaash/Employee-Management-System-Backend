@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
-use App\Models\user_details;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 class AuthController extends Controller
 {
     //
@@ -34,6 +32,7 @@ class AuthController extends Controller
             'password'  => $data['password']
         );
         if (Auth::attempt($user_data)) {
+            $request->session()->put('admin',$request->input());
             return redirect('/dashboard');
         }else{
             return back()->with('error', 'Invalid Credentials!');
@@ -41,6 +40,7 @@ class AuthController extends Controller
     }
     public function logout(Request $request){
         Auth::logout();
+        session()->forget('admin');
         return redirect('/');
     }
     public function register(){
@@ -48,13 +48,16 @@ class AuthController extends Controller
     }
     public function validate_registration(Request $request){
         $request->validate([
-            'employee_name'     => 'required',
+            'user_name'     => 'required',
             'email'             => 'required',
+            'password'          => 'required',
+            'role'              => 'required',
             'designation'       => 'required',
             'phone_number'      => 'required',
             'salary'            => 'required',
             'age'               => 'required',
-            'dob'               => 'required'
+            'dob'               => 'required',
+            'image'             => 'required'
         ]);
     }
 }

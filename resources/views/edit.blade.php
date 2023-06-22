@@ -36,21 +36,33 @@
                 </div>
                 <div class="row ">
                     <div class="col-md-12">
-                        <form method="POST" action="{{url('dashboard/'. $user_info->id)}}">
+                        <form method="POST" action="{{url('dashboard/'. $user_details->id)}}">
                             {!! csrf_field() !!}
                             @method("PATCH")
                             <div class="mb-3">
                                 <label for="exampleInputName1" class="form-label">Name</label>
-                                <input type="text" value="{{$user_info->employee_name}}" name="employee_name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp">
+                                <input type="text" value="{{$user_details->user_name}}" name="user_name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp">
                               </div>
                             <div class="mb-3">
                               <label for="exampleInputEmail1" class="form-label">Email</label>
-                              <input type="text" value="{{$user_info->email}}" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              <input type="text" value="{{$user_details->email}}" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" value="{{$user_details->password}}" name="password" class="form-control" id="exampleInputPassword1" aria-describedby="passwordHelp">
+                              </div>
+                            <div class="mb-3">
+                                <label for="exampleInputRole"  class="form-label">Role</label>
+                                <select class="form-select" aria-label="Default select example" id="exampleInputRole1" name="role">
+                                    <option selected>Employee</option>
+                                        <option>Manager</option>
+                                        <option>Admin</option>
+                                </select>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputDesignation"  class="form-label">Designation</label>
-                                <select class="form-select" aria-label="Default select example" value="{{$user_info->designation}}" id="exampleInputDesignation1" name="designation">
-                                        <option >{{$user_info->designation}}</option>
+                                <select class="form-select" aria-label="Default select example" value="{{$user_details->designation}}" id="exampleInputDesignation1" name="designation">
+                                        <option >{{$user_details->designation}}</option>
                                         <option>Web Developer</option>
                                         <option>Tester</option>
                                         <option>Android Developer</option>
@@ -59,19 +71,23 @@
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPhoneNumber1" class="form-label">Phone Number</label>
-                                <input type="text" name="phone_number" value="{{$user_info->phone_number}}" class="form-control" id="exampleInputPhoneNumber1" aria-describedby="phHelp">
+                                <input type="text" name="phone_number" value="{{$user_details->phone_number}}" class="form-control" id="exampleInputPhoneNumber1" aria-describedby="phHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputSalary1" class="form-label">Salary</label>
-                                <input type="text" name="salary" class="form-control" value="{{$user_info->salary}}" id="exampleInputSalary1" aria-describedby="phHelp">
+                                <input type="text" name="salary" class="form-control" value="{{$user_details->salary}}" id="exampleInputSalary1" aria-describedby="phHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputAge" class="form-label">Age</label>
-                                <input type="text" name="age" class="form-control" value="{{$user_info->age}}" id="exampleInputAge1" aria-describedby="ageHelp">
+                                <input type="text" name="age" class="form-control" value="{{$user_details->age}}" id="exampleInputAge1" aria-describedby="ageHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputDOB" class="form-label">DOB</label>
-                                <input type="date" name="dob" class="form-control" value="{{$user_info->dob}}"id="exampleInputDOB1" aria-describedby="dobHelp">
+                                <input type="date" name="dob" class="form-control" value="{{$user_details->dob}}"id="exampleInputDOB1" aria-describedby="dobHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputImage" class="form-label">Profile</label>
+                                <input type="file" name="image" class="form-control" value="{{$user_details->image}}" id="exampleInputImage1" aria-describedby="ImageHelp">
                             </div>
                                 <button type="submit" value="update" class="btn btn-secondary">Submit</button>
                           </form>

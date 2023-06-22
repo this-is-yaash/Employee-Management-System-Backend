@@ -4,22 +4,20 @@
 <table id="table" class="center" style="width: 100%">
 <thead>
     <th>Employee Name</i></th>
+    <th>Role</th>
     <th>Designation</i></th>
     <th>Phone Number</i></th>
-    <th>Salary </i></th>
     <th>Age</i></th>
-    <th>Date of Birth</i></th>
     <th>Action</th>
 </thead >
 <tbody>
-    @foreach ($user_info as $item)
+    @foreach ($user_details as $item)
         <tr>
-                <td>{{$item->employee_name}}</td>
+                <td>{{$item->user_name}}</td>
+                <td>{{$item->role}}</td>
                 <td>{{$item->designation}}</td>
                 <td>{{$item->phone_number}}</td>
-                <td>{{$item->salary}}</td>
                 <td>{{$item->age}}</td>
-                <td>{{$item->dob}}</td>
                 <td>
                     <a href="{{ url('/dashboard/' . $item->id) }}" title="View Employee"><button class="btn btn-info btn-sm"><i aria-hidden="true"></i> View</button></a>
                     <a href="{{ url("/dashboard/" . $item->id . '/edit') }}" title="Edit Employee"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</button></a>
@@ -31,7 +29,6 @@
                 </td>
             </tr>
     @endforeach
-
 </tbody>
 </table>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserDetail extends Model
 {
-    protected $table = 'user_info';
-    protected $fillable = ['employee_name', 'email', 'designation', 'phone_number', 'salary', 'age', 'dob'];
+    protected $table = 'user_details';
+    protected $fillable = ['id','user_name', 'email','password','role','designation', 'phone_number', 'salary', 'age', 'dob','image'];
 }

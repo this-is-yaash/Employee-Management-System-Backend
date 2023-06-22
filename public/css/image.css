@@ -1,0 +1,9 @@
+img{
+    border-radius: 1px 2px 1px;
+    width: 250px;
+    height: 320px;
+    background: #ccc;
+    border: 2px solid lightslategray;
+    box-shadow: 2px 1px 6px ;
+    border-radius: 10px;
+}
