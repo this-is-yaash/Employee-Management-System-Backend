@@ -54,8 +54,8 @@
           <td>Going to Hospital</td>
           <td><span class="sts">• Pending</span></td>
           <td>
-            <button type="button1" class="btn btn-success">Approved</button>
-            <button type="button2" class="btn btn-danger">Declined</button>
+            <button type="button1" class="btn btn-success">Approve</button>
+            <button type="button2" class="btn btn-danger">Decline</button>
           </td>
         </tr>
         <tr>
@@ -66,8 +66,8 @@
           <td>Fever</td>
           <td><span class="sts">• Pending</span></td>
           <td>
-            <button type="button1" class="btn btn-success">Approved</button>
-            <button type="button2" class="btn btn-danger">Declined</button>
+            <button type="button1" class="btn btn-success">Approve</button>
+            <button type="button2" class="btn btn-danger">Decline</button>
           </td>
         </tr>
         <tr>
@@ -78,8 +78,8 @@
           <td>Going to Hospital</td>
           <td><span class="sts">• Pending</span></td>
           <td>
-            <button type="button1" class="btn btn-success">Approved</button>
-            <button type="button2" class="btn btn-danger">Declined</button>
+            <button type="button1" class="btn btn-success">Approve</button>
+            <button type="button2" class="btn btn-danger">Decline</button>
           </td>
         </tr>
         <td>Ben Johnson</td>
@@ -89,8 +89,8 @@
         <td>Going to Hospital</td>
         <td><span class="sts">• Pending</span></td>
         <td>
-          <button type="button1" class="btn btn-success">Approved</button>
-          <button type="button2" class="btn btn-danger">Declined</button>
+          <button type="button1" class="btn btn-success">Approve</button>
+          <button type="button2" class="btn btn-danger">Decline</button>
         </td>
           </tr>
           <tr>
@@ -101,8 +101,8 @@
           <td>Going to Hospital</td>
           <td><span class="sts">• Pending</span></td>
           <td>
-            <button type="button1" class="btn btn-success">Approved</button>
-            <button type="button2" class="btn btn-danger">Declined</button>
+            <button type="button1" class="btn btn-success">Approve</button>
+            <button type="button2" class="btn btn-danger">Decline</button>
           </td>
         </tr>
         <tr>
@@ -113,8 +113,8 @@
           <td>Going to Hospital</td>
           <td><span class="sts">• Pending</span></td>
           <td>
-            <button type="button1" class="btn btn-success">Approved</button>
-            <button type="button2" class="btn btn-danger">Declined</button>
+            <button type="button1" class="btn btn-success">Approve</button>
+            <button type="button2" class="btn btn-danger">Decline</button>
           </td>
           <tr>
             <td>John Smith</td>
@@ -124,8 +124,8 @@
             <td>Going to Hospital</td>
             <td><span class="sts">• Pending</span></td>
             <td>
-              <button type="button1" class="btn btn-success">Approved</button>
-              <button type="button2" class="btn btn-danger">Declined</button>
+              <button type="button1" class="btn btn-success">Approve</button>
+              <button type="button2" class="btn btn-danger">Decline</button>
             </td>
           </tr>
           <tr>
@@ -136,8 +136,8 @@
             <td>Fever</td>
             <td><span class="sts">• Pending</span></td>
             <td>
-              <button type="button1" class="btn btn-success">Approved</button>
-              <button type="button2" class="btn btn-danger">Declined</button>
+              <button type="button1" class="btn btn-success">Approve</button>
+              <button type="button2" class="btn btn-danger">Decline</button>
             </td>
           </tr>
           <tr>
@@ -148,8 +148,8 @@
             <td>Going to Hospital</td>
             <td><span class="sts">• Pending</span></td>
             <td>
-              <button type="button1" class="btn btn-success">Approved</button>
-              <button type="button2" class="btn btn-danger">Declined</button>
+              <button type="button1" class="btn btn-success">Approve</button>
+              <button type="button2" class="btn btn-danger">Decline</button>
             </td>
           </tr>
           <td>Ben Johnson</td>
@@ -159,8 +159,8 @@
           <td>Going to Hospital</td>
           <td><span class="sts">• Pending</span></td>
           <td>
-            <button type="button1" class="btn btn-success">Approved</button>
-            <button type="button2" class="btn btn-danger">Declined</button>
+            <button type="button1" class="btn btn-success">Approve</button>
+            <button type="button2" class="btn btn-danger">Decline</button>
           </td>
             </tr>
             <tr>
@@ -171,8 +171,8 @@
             <td>Going to Hospital</td>
             <td><span class="sts">• Pending</span></td>
             <td>
-              <button type="button1" class="btn btn-success">Approved</button>
-              <button type="button2" class="btn btn-danger">Declined</button>
+              <button type="button1" class="btn btn-success">Approve</button>
+              <button type="button2" class="btn btn-danger">Decline</button>
             </td>
           </tr>
           <tr>
@@ -183,8 +183,8 @@
             <td>Going to Hospital</td>
             <td><span class="sts">• Pending</span></td>
             <td>
-              <button type="button1" class="btn btn-success">Approved</button>
-              <button type="button2" class="btn btn-danger">Declined</button>
+              <button type="button1" class="btn btn-success">Approve</button>
+              <button type="button2" class="btn btn-danger">Decline</button>
             </td>
              <tr>
           <td>John Smith</td>
@@ -194,8 +194,8 @@
           <td>Going to Hospital</td>
           <td><span class="sts">• Pending</span></td>
           <td>
-            <button type="button1" class="btn btn-success">Approved</button>
-            <button type="button2" class="btn btn-danger">Declined</button>
+            <button type="button1" class="btn btn-success">Approve</button>
+            <button type="button2" class="btn btn-danger">Decline</button>
           </td>
         </tr>
         <tr>
@@ -206,8 +206,8 @@
           <td>Fever</td>
           <td><span class="sts">• Pending</span></td>
           <td>
-            <button type="button1" class="btn btn-success">Approved</button>
-            <button type="button2" class="btn btn-danger">Declined</button>
+            <button type="button1" class="btn btn-success">Approve</button>
+            <button type="button2" class="btn btn-danger">Decline</button>
           </td>
         </tr>
         <tr>
@@ -218,8 +218,8 @@
           <td>Going to Hospital</td>
           <td><span class="sts">• Pending</span></td>
           <td>
-            <button type="button1" class="btn btn-success">Approved</button>
-            <button type="button2" class="btn btn-danger">Declined</button>
+            <button type="button1" class="btn btn-success">Approve</button>
+            <button type="button2" class="btn btn-danger">Decline</button>
           </td>
         </tr>
         <td>Ben Johnson</td>
@@ -229,8 +229,8 @@
         <td>Going to Hospital</td>
         <td><span class="sts">• Pending</span></td>
         <td>
-          <button type="button1" class="btn btn-success">Approved</button>
-          <button type="button2" class="btn btn-danger">Declined</button>
+          <button type="button1" class="btn btn-success">Approve</button>
+          <button type="button2" class="btn btn-danger">Decline</button>
         </td>
           </tr>
           <tr>
@@ -241,8 +241,8 @@
           <td>Going to Hospital</td>
           <td><span class="sts">• Pending</span></td>
           <td>
-            <button type="button1" class="btn btn-success">Approved</button>
-            <button type="button2" class="btn btn-danger">Declined</button>
+            <button type="button1" class="btn btn-success">Approve</button>
+            <button type="button2" class="btn btn-danger">Decline</button>
           </td>
         </tr>
         <tr>
@@ -253,8 +253,8 @@
           <td>Going to Hospital</td>
           <td><span class="sts">• Pending</span></td>
           <td>
-            <button type="button1" class="btn btn-success">Approved</button>
-            <button type="button2" class="btn btn-danger">Declined</button>
+            <button type="button1" class="btn btn-success">Approve</button>
+            <button type="button2" class="btn btn-danger">Decline</button>
           </td>
         </tbody>
       </table>
