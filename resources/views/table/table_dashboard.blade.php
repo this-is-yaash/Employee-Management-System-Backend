@@ -4,17 +4,15 @@
 <table id="table" class="center" style="width: 100%">
 <thead>
     <th>Employee Name</i></th>
-    <th>Role</th>
     <th>Designation</i></th>
     <th>Phone Number</i></th>
     <th>Age</i></th>
     <th>Action</th>
 </thead >
 <tbody>
-    @foreach ($user_details as $item)
+    @foreach ($users as $item)
         <tr>
-                <td>{{$item->user_name}}</td>
-                <td>{{$item->role}}</td>
+                <td>{{$item->name}}</td>
                 <td>{{$item->designation}}</td>
                 <td>{{$item->phone_number}}</td>
                 <td>{{$item->age}}</td>

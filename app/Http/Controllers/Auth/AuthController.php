@@ -4,16 +4,13 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 class AuthController extends Controller
 {
     //
     public function login(Request $request)
     {
         $data = $request->all();
-        // $validator = Validator::make($request->all(), [
-        //     'title' => 'required|unique:posts|max:255',
-        //     'body' => 'required',
-        // ]);
         $request->validate([
             'email' => 'required',
             'password' => 'required'
@@ -22,11 +19,6 @@ class AuthController extends Controller
             'email.required'    =>"Incorrect Email",
             'password.required' =>"Incorrect Password"
         ]);
-
-        //  if ($validator->fails()) {
-        //     $errors = $validator->errors();
-        //     return back()->with('errors', $errors);
-        // }
         $user_data = array(
             'email'     => $data['email'],
             'password'  => $data['password']
@@ -34,6 +26,7 @@ class AuthController extends Controller
         if (Auth::attempt($user_data)) {
             $request->session()->put('admin',$request->input());
             return redirect('/dashboard');
+
         }else{
             return back()->with('error', 'Invalid Credentials!');
         }

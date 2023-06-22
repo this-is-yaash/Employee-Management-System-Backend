@@ -8,8 +8,8 @@ class DatabaseController extends Controller
 {
     public function index()
     {
-        $user_details= UserDetail::all();
-        return view('table.table_dashboard')->with('user_details', $user_details);
+        $users= UserDetail::all();
+        return view('table.table_dashboard')->with('users', $users);
     }
 
     public function create()
@@ -35,19 +35,19 @@ class DatabaseController extends Controller
     }
     public function show($id)
     {
-        $user_details=UserDetail::find($id);
-        return view('table/view')->with('user_details', $user_details);
+        $users=UserDetail::find($id);
+        return view('table/view')->with('users', $users);
     }
     public function edit($id)
     {
-        $user_details= UserDetail::find($id);
-        return view('/edit')->with('user_details', $user_details);
+        $users= UserDetail::find($id);
+        return view('/edit')->with('users', $users);
     }
     public function update(Request $request, $id)
     {
-        $user_details = UserDetail::find($id);
+        $users = UserDetail::find($id);
         $input = $request->all();
-        $user_details->update($input);
+        $users->update($input);
         return redirect('/dashboard')->with('flash_message', 'Employee Updated!');
     }
     public function destroy($id)

@@ -2,6 +2,7 @@
     use Illuminate\Support\Facades\Route;
     use App\Http\Controllers\Auth\AuthController;
     use App\Http\Controllers\DatabaseController;
+    use App\Http\Middleware\isAdmin;
     use App\Http\Middleware\UserValidation;
     use Monolog\Handler\RotatingFileHandler;
 
@@ -87,3 +88,5 @@
     Route::get("profile",function(){
         return view('employee/content/emp_profile');
     });
+
+    Route::get('/profile' ,[App\Http\Controllers\User\HomeController::class,   'index'])->name('Home')->middleware('isAdmin');
