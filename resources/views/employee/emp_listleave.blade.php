@@ -2,7 +2,7 @@
 <html>
 <head>
 </head>
-<title>Dashboard</title>
+<title>Home</title>
 
 <link rel="stylesheet" href="/css/details.css">
 <link rel="stylesheet" href="/css/navibar.css">
@@ -19,7 +19,7 @@
   <div class="col-12">
     <div class="row">
       <ul id="navbar">
-          <li><a href="{{'dashboard'}}">Dashboard</a></li>
+          <li><a href="{{'home'}}">Dashboard</a></li>
         <div class="logout">
           <li><a href="{{route('logout')}}">Logout</a></li>
         </div>
@@ -30,16 +30,13 @@
   <div class="row">
 <div class="col-2">
     <div class="vertical-menu">
-      <a href="{{'dashboard'}}" class="active"><i class="fa-solid fa-address-card"></i><b>Employee Details</b></a>
-      <a href="{{'attendance'}}"><i class="fa-solid fa-circle-check"></i><b>Employee Attendance</b></a>
-      <a href="{{'request'}}"><i class="fa-sharp fa-solid fa-list-check"></i><b>Leave Request</b></a>
+      <a href="{{'profile'}}"><i class="fa-solid fa-address-card"></i><b>Employee Profile</b></a>
+      <a href="{{'leaverequest'}}"><i class="fa-solid fa-circle-check"></i><b>Employee Leave Request Form</b></a>
+      <a href="{{'listofleave'}}"class="active"><i class="fa-sharp fa-solid fa-list-check"></i><b>List of Leave</b></a>
     </div>
   </div>
   <div class="col-10">
-    <div><h1>Employee Details</h1></div>
-    <a href="{{route('register')}}"><button class="btn btn-secondary" id="addemp">Add Employee</button></a>
-    @yield('tablecontent')
-
+    <div><h1>Lists Of Leave</h1></div>
 </div>
   </div>
 

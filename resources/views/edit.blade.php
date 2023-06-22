@@ -1,5 +1,6 @@
 <html lang="en">
     <head>
+
     </head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,23 +32,24 @@
         <div class="d-flex align-items-center justify-content-center h-100"><!-- align-items-center(align vertical)justify-content-center(align horizontal) -->
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Add Employee</h1>
+                    <h1>Edit Employee</h1>
                 </div>
                 <div class="row ">
                     <div class="col-md-12">
-                        <form method="POST" action="{{url('dashboard')}}" enctype="multipart/form-data">
+                        <form method="POST" action="{{url('dashboard/'. $user_details->id)}}">
                             {!! csrf_field() !!}
+                            @method("PATCH")
                             <div class="mb-3">
                                 <label for="exampleInputName1" class="form-label">Name</label>
-                                <input type="text" name="user_name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp">
+                                <input type="text" value="{{$user_details->user_name}}" name="user_name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp">
                               </div>
                             <div class="mb-3">
                               <label for="exampleInputEmail1" class="form-label">Email</label>
-                              <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              <input type="text" value="{{$user_details->email}}" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" name="password" class="form-control" id="exampleInputPassword1" aria-describedby="passwordHelp">
+                                <input type="password" value="{{$user_details->password}}" name="password" class="form-control" id="exampleInputPassword1" aria-describedby="passwordHelp">
                               </div>
                             <div class="mb-3">
                                 <label for="exampleInputRole"  class="form-label">Role</label>
@@ -59,35 +61,35 @@
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputDesignation"  class="form-label">Designation</label>
-                                <select class="form-select" aria-label="Default select example" id="exampleInputDesignation1" name="designation">
-                                    <option selected>Web Designer</option>
+                                <select class="form-select" aria-label="Default select example" value="{{$user_details->designation}}" id="exampleInputDesignation1" name="designation">
+                                        <option >{{$user_details->designation}}</option>
                                         <option>Web Developer</option>
                                         <option>Tester</option>
                                         <option>Android Developer</option>
                                         <option>iOS Developer</option>
-                                </select>
+                                  </select>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPhoneNumber1" class="form-label">Phone Number</label>
-                                <input type="text" name="phone_number" class="form-control" id="exampleInputPhoneNumber1" aria-describedby="phHelp">
+                                <input type="text" name="phone_number" value="{{$user_details->phone_number}}" class="form-control" id="exampleInputPhoneNumber1" aria-describedby="phHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputSalary1" class="form-label">Salary</label>
-                                <input type="text" name="salary" class="form-control" id="exampleInputSalary1" aria-describedby="phHelp">
+                                <input type="text" name="salary" class="form-control" value="{{$user_details->salary}}" id="exampleInputSalary1" aria-describedby="phHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputAge" class="form-label">Age</label>
-                                <input type="text" name="age" class="form-control" id="exampleInputAge1" aria-describedby="ageHelp">
+                                <input type="text" name="age" class="form-control" value="{{$user_details->age}}" id="exampleInputAge1" aria-describedby="ageHelp">
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputAge" class="form-label">DOB</label>
-                                <input type="date" name="dob" class="form-control" id="exampleInputDOB1" aria-describedby="dobHelp">
+                                <label for="exampleInputDOB" class="form-label">DOB</label>
+                                <input type="date" name="dob" class="form-control" value="{{$user_details->dob}}"id="exampleInputDOB1" aria-describedby="dobHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputImage" class="form-label">Profile</label>
-                                <input type="file" name="image" class="form-control" id="exampleInputImage1" aria-describedby="ImageHelp">
+                                <input type="file" name="image" class="form-control" value="{{$user_details->image}}" id="exampleInputImage1" aria-describedby="ImageHelp">
                             </div>
-                                <button type="submit" value="Save" class="btn btn-secondary">Register</button>
+                                <button type="submit" value="update" class="btn btn-secondary">Submit</button>
                           </form>
                     </div>
                 </div>
